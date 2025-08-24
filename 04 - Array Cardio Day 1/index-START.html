@@ -61,6 +61,11 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const sortedPeople = people.sort((personA, personB) => {
+      const [lastA, firstA] = personA.split(", ");
+      const [lastB, firstB] = personB.split(",");
+      return lastA.localeCompare(lastB);
+    });
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
